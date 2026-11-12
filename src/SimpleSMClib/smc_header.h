@@ -2,7 +2,7 @@
     #define smc_header_h
 
     #include <Arduino.h>
-    #include "SMC_op_codes.h"
+    #include "smcop.h"
 
     struct SMCHeader {
         SMCOP op;
