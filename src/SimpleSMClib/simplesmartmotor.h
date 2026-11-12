@@ -8,7 +8,7 @@
 #include "return_modes.h"
 #include "feedback.h"
 
-#define WRITE_DELAY_MS 6 // Time delay for each byte written to EEPROM
+#define WRITE_DELAY_MS 1000 // Time delay for each byte written to EEPROM
 
 class SimpleSmartMotor {
   private:

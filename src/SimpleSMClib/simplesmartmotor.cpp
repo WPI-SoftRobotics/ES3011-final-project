@@ -79,7 +79,7 @@ uint8_t SimpleSmartMotor::_tune_pid(ControlMode control_mode, float kp, float ki
         &args,
         sizeof(args)
     );
-    _write_delay(sizeof(args)); // Small delay after writing to EEPROM
+    delay(WRITE_DELAY_MS); // Small delay after writing to EEPROM
     return status;
 }
 
@@ -91,8 +91,4 @@ uint8_t SimpleSmartMotor::_set_return_mode(ReturnMode return_mode) {
         &args,
         sizeof(args)
     );
-}
-
-void SimpleSmartMotor::_write_delay(uint8_t byte_num) {
-    delay(byte_num*WRITE_DELAY_MS);
 }
